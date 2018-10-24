@@ -47,6 +47,13 @@ class IFaceEmbedding(object):
         embedding = normalize(embedding).flatten()
         return embedding
 
+    def test_image(self):
+        imgs = [cv2.imread(_img_path) for _img_path in self.config.TEST_IMAGES]
+        embeddings = [self.get_feature(img) for img in imgs]
+        e1, e2 = embeddings
+        dist = np.sum(np.square(e1-e2))
+        return e1, e2, dist
+
 
 def main():
     iface = IFaceEmbedding()
