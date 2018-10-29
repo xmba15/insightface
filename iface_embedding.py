@@ -7,7 +7,7 @@ import mxnet as mx
 import os
 os.environ["MXNET_CUDNN_AUTOTUNE_DEFAULT"] = '0'
 from sklearn.preprocessing import normalize
-from iface_config import IFaceConfig
+from .iface_config import IFaceConfig
 
 
 class IFaceEmbedding(object):
