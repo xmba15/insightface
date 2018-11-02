@@ -11,7 +11,7 @@ from .iface_config import IFaceConfig
 
 
 class IFaceEmbedding(object):
-    def __init__(self, image_size=(100,100)):
+    def __init__(self, image_size=(112,112)):
         self.config = IFaceConfig()
         self.image_size = image_size
         self.init_model(self.config.MODEL)
