@@ -14,7 +14,7 @@ class IFaceEmbedding(object):
     def __init__(self, image_size=(112,112)):
         self.config = IFaceConfig()
         self.image_size = image_size
-        self.init_model(self.config.MODEL)
+        self.init_model(self.config.MODEL_R100)
 
     def init_model(self, model_str, layer="fc1"):
         if self.config.USE_CUDA:
